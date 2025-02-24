@@ -1,5 +1,14 @@
 sudo su
 sudo apt update && sudo apt upgrade -y
 sudo apt install containerd docker.io docker-compose -y
+sudo curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
-sudo docker-compose -f w10.yaml up -d
+
+
+sudo docker compose -f w10.yaml up
+sudo docker-compose -f ./w10.yaml up
+
+
+di bawah tempat buat nyalain
+test
