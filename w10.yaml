@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11l"
+      VERSION: "10"
       USERNAME: "FARREL"
       PASSWORD: "vscode"
       RAM_SIZE: "12G"
