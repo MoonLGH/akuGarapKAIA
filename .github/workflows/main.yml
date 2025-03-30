@@ -1,29 +1,36 @@
-name: CI
+name: Scheduled Node.js Job
 
-on: [push, workflow_dispatch]
+on:
+  schedule:
+    - cron: '0 5 * * *'  # 12:00 WIB (UTC+7)
+  workflow_dispatch:  # Memungkinkan menjalankan workflow secara manual
 
 jobs:
-  build:
-    runs-on: windows-latest
+  run-scripts:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Download
-        run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Extract
-        run: Expand-Archive ngrok.zip
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Auth
-        run: .\ngrok\ngrok.exe authtoken $ENV:NGROK_AUTH_TOKEN
-        env:
-          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+      - name: Install dependencies
+        run: npm i
 
-      - name: Enable RDP
+      - name: Setup environment
         run: |
-          Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
-          Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-          Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Value 1
-          net user "runneradmin" (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
+          echo "${{ secrets.ENV_FILE }}" > .env
 
-      - name: Create Tunnel
-        run: .\ngrok\ngrok.exe tcp 3389
+      - name: Run index1.js
+        run: node index1.js
+        env:
+          NODE_ENV: production
+
+      - name: Run index2.js
+        run: node index2.js
+        env:
+          NODE_ENV: production
