@@ -21,16 +21,15 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Setup environment
-        run: |
-          echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Run index1.js
         run: node index1.js
         env:
           NODE_ENV: production
+          config: ${{ secrets.env_config }}
 
       - name: Run index2.js
         run: node index2.js
         env:
           NODE_ENV: production
+          config: ${{ secrets.env_config }}
