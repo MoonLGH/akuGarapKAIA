@@ -1,0 +1,36 @@
+name: Scheduled Token Transfer
+
+on:
+  schedule:
+    - cron: '2 19 * * *'  # 02:02 WIB (UTC+7)
+  workflow_dispatch:  # Memungkinkan menjalankan workflow secara manual
+
+jobs:
+  transfer-tokens:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+      - name: Run cekSlot.js
+        run: node utils/cekSlot.js
+      - name: Run Logs Wallet
+        run: node utils/cekwalletprod.js
+        env:
+          NODE_ENV: production
+          config: ${{ secrets.env_config }}
+      - name: Show logs from token-holder.txt
+        run: cat token-holdings.txt
+      - name : Running Transfer Token
+        run: node utils/tfallprod.js
+        env:
+          NODE_ENV: production
+          config: ${{ secrets.env_config }}

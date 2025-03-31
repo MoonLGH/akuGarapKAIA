@@ -169,6 +169,7 @@ async function processClaimsForConfig(config) {
 
 async function main() {
   const configs = readConfigs();
+
   
   if (configs.length === 0) {
     console.log('No configurations found in data.txt');
