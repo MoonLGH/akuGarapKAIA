@@ -2,7 +2,7 @@ name: Scheduled Token Transfer
 
 on:
   schedule:
-    - cron: '2 19 * * *'  # 02:02 WIB (UTC+7)
+    - cron: '0 19 * * *'  # 02:00 WIB (UTC+7)
   workflow_dispatch:  # Memungkinkan menjalankan workflow secara manual
 
 jobs:
