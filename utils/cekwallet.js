@@ -107,9 +107,9 @@ function formatSmallNumber(num) {
 }
 
 // Fungsi untuk menulis output ke file
-function writeTokenHoldings(walletName, tokenHoldings) {
+function writeTokenHoldings(walletName, tokenHoldings,address) {
   const output = [
-    `Wallet: ${walletName}`,
+    `Wallet: ${walletName} (${address})`,
     `Memiliki ${tokenHoldings.length} token:`,
     ...tokenHoldings.map(t => `- ${t.symbol}: ${t.balance}`),
     '────────────────────'
@@ -175,8 +175,15 @@ async function scanWallet(walletConfig) {
 
   // Tulis ke file jika wallet memiliki token selain ETH
   if (tokenHoldings.length > 0) {
-    writeTokenHoldings(walletConfig.name, tokenHoldings);
+    writeTokenHoldings(walletConfig.name, tokenHoldings,wallet.address);
   }
+  // tulis ke file jumlah eth juga
+  writeTokenHoldings(walletConfig.name, [
+    {
+      symbol: "ETH",
+      balance: ethBalanceInEth + ` ($${ethValue.toFixed(2)})`
+    }
+  ],wallet.address);
 
   console.log("──────────────────────────────────");
   console.log(`💰 Total Value: $${totalValue.toFixed(2)}`);

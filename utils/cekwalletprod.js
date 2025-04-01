@@ -155,6 +155,14 @@ async function scanWallet(walletConfig) {
     writeTokenHoldings(walletConfig.name, tokenHoldings);
   }
 
+    // tulis ke file jumlah eth juga
+    writeTokenHoldings(walletConfig.name, [
+      {
+        symbol: "ETH",
+        balance: ethBalanceInEth
+      }
+    ]);
+    
   console.log("──────────────────────────────────");
   console.log(`💰 Total Value: $${totalValue.toFixed(2)}`);
   return totalValue;
