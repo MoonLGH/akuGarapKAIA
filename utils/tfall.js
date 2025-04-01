@@ -29,6 +29,7 @@ function readConfigs() {
 // Read token list from tokens.json
 function readTokenList() {
   try {
+    
     const data = require("./token.json")
     return data
   } catch (error) {

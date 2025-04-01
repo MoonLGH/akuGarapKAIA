@@ -2,7 +2,7 @@ name: Scheduled Node.js Job
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # 12:00 WIB (UTC+7)
+    - cron: '0 21 * * *'  # 2:00 PM Los Angeles Time (PDT)
   workflow_dispatch:  # Memungkinkan menjalankan workflow secara manual
 
 jobs:
@@ -20,7 +20,6 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-
 
       - name: Run index1.js
         run: node index1.js

@@ -141,8 +141,32 @@ async function scanWallet(walletConfig) {
   // 2. Token balances
   const tokenData = (await axios.get("https://warpslot.fun/api/tokens")).data
   console.log("\n🪙 Token Balances:");
-  
+  tokenData.push(	{
+		"symbol": "$EGGS",
+		"internalSymbol": "EGGS",
+		"address": "0x712f43B21cf3e1B189c27678C0f551c08c01D150",
+	})  
   for (const token of tokenData) {
+    if(token.symbol === "$EGGS"){
+      const contract = new ethers.Contract(token.address, ERC20_ABI, provider);
+      let balance = await contract.balanceOf(wallet.address);
+
+      // Simpan data token jika memiliki balance
+      // Jika balance tidak sama dengan banget
+      // get decimal with coingecko
+      const decimals = await contract.decimals();
+      const balanceInEth = ethers.formatUnits(balance, decimals);
+       balance = parseFloat(balanceInEth);
+      if(balance !== 0){
+        console.log(
+          `${token.symbol}: ${balance} `
+        );
+      tokenHoldings.push({
+        symbol: token.symbol,
+        balance: balance
+      });
+    }
+    }
     try {
       const contract = new ethers.Contract(token.address, ERC20_ABI, provider);
       const balance = await contract.balanceOf(wallet.address);

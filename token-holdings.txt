@@ -1,61 +1,61 @@
 Laporan Kepemilikan Token (Non-ETH)
-Tanggal: 4/1/2025, 4:48:28 AM
+Tanggal: 4/1/2025, 7:07:21 AM
 
 Wallet: FARELBUTUH13 (0x99594EABBa94c1e999617B2C624C7FCA060b6fe7)
 Memiliki 1 token:
-- ETH: 0.000013871941019755 ($0.03)
+- ETH: 0.000013476616394099 ($0.03)
 ────────────────────
 Wallet: BERHENTI (0xF6f2D0071198bB13d90395c0297e492772f8fa17)
 Memiliki 1 token:
-- ETH: 0.000015404174410969 ($0.03)
+- ETH: 0.000015008481711625 ($0.03)
 ────────────────────
 Wallet: CC205 (0x7Ef0C0baD87635a5A2e8DaB32319dd414789f2CD)
 Memiliki 1 token:
-- ETH: 0.00000751976879568 ($0.01)
+- ETH: 0.000007124614087166 ($0.01)
 ────────────────────
 Wallet: buatfarel (0x411CCEe0135D155f03e0A6E22C49f753d3dB0F6a)
 Memiliki 1 token:
-- ETH: 0.000007652009972202 ($0.01)
+- ETH: 0.000007257185727025 ($0.01)
 ────────────────────
 Wallet: kenyang (0x4Fb3782CF3b21DC05ED8cE10a7Ff35bA6316AEe9)
 Memiliki 1 token:
-- ETH: 0.000007396786198218 ($0.01)
+- ETH: 0.000007001592558678 ($0.01)
 ────────────────────
 Wallet: testimoni (0x302af0792394e8DB881f4709cA710b6af726FdE4)
 Memiliki 1 token:
-- ETH: 0.000007668570674299 ($0.01)
+- ETH: 0.000007322433387456 ($0.01)
 ────────────────────
 Wallet: martabak (0xeEf10Dc244086B142Bde7B106f55dA7AC37D73a5)
 Memiliki 1 token:
-- ETH: 0.000012767165639991 ($0.02)
+- ETH: 0.000012328834294053 ($0.02)
 ────────────────────
 Wallet: pssi (0x8E7d901D2eC3b6b45E2386026b244c0731472d67)
 Memiliki 1 token:
-- ETH: 0.000007545729457335 ($0.01)
+- ETH: 0.000007198298650548 ($0.01)
 ────────────────────
 Wallet: orgil (0xf054cf5A5C2917Ab115A8EAB53bb2bBe3dE89Feb)
 Memiliki 1 token:
-- ETH: 0.000014838366106534 ($0.03)
+- ETH: 0.000014441262233315 ($0.03)
 ────────────────────
 Wallet: quesera (0xD884A51Ac33A156A837ddbF5F8cea67EFd52Ba57)
 Memiliki 1 token:
-- ETH: 0.000014523618348581 ($0.03)
+- ETH: 0.000014126155708799 ($0.03)
 ────────────────────
 Wallet: lucubanget (0x20893DD2e52C371A1f4AFa0864A40c290dC3455d)
 Memiliki 1 token:
-- ETH: 0.000015004577433234 ($0.03)
+- ETH: 0.000014607229385683 ($0.03)
 ────────────────────
 Wallet: cina (0xE9d74c8fd060744998F1e8ebAA86cD303d2BbFF4)
 Memiliki 1 token:
-- ETH: 0.00001468949113226 ($0.03)
+- ETH: 0.000014291110675582 ($0.03)
 ────────────────────
 Wallet: rphbis (0x2D34A5373b33d6DEA76e6972f74Ef4d9EF34d3b3)
 Memiliki 1 token:
-- ETH: 0.00001442723037356 ($0.03)
+- ETH: 0.000014028409311549 ($0.03)
 ────────────────────
 Wallet: akumainml (0xCCc6844268d72eFdDf2bd45BC3037dAD0f3D7141)
 Memiliki 1 token:
-- ETH: 0.000014865187971311 ($0.03)
+- ETH: 0.00001446565390442 ($0.03)
 ────────────────────
 Wallet: megudara (0xd30eFD215cFa6B4bAA414622fa509406610f0272)
 Memiliki 1 token:
@@ -63,39 +63,39 @@ Memiliki 1 token:
 ────────────────────
 Wallet: sal (0x079c36D72A4E1335441E8C4446F12DAC0a078dCC)
 Memiliki 1 token:
-- ETH: 0.000014850882543544 ($0.03)
+- ETH: 0.000014451819662925 ($0.03)
 ────────────────────
 Wallet: idigitaf (0x82A71a675DE7591c832CE41FDb74D64dDaAf1884)
 Memiliki 1 token:
-- ETH: 0.000014678989930461 ($0.03)
+- ETH: 0.000014280336132145 ($0.03)
 ────────────────────
 Wallet: maluv (0x85cEb86fF5BEBfEf2c2B326589383245D1D25E44)
 Memiliki 1 token:
-- ETH: 0.000014808261030985 ($0.03)
+- ETH: 0.000014410142033519 ($0.03)
 ────────────────────
 Wallet: keretakencan (0x0Ac260a8a6f887Cb97853E30227C5355feCc2c28)
 Memiliki 1 token:
-- ETH: 0.000014404192402392 ($0.03)
+- ETH: 0.000014005810171664 ($0.03)
 ────────────────────
 Wallet: tersenyum (0x2ae687c8e3319398f3CE2A8260beb269d175ec0d)
 Memiliki 1 token:
-- ETH: 0.000014689163395183 ($0.03)
+- ETH: 0.000014290963448217 ($0.03)
 ────────────────────
 Wallet: lombaSihir (0x295Ae50673999bee79d4509955575dd38E05b508)
 Memiliki 1 token:
-- ETH: 0.000014747169898762 ($0.03)
+- ETH: 0.000014361442079837 ($0.03)
 ────────────────────
 Wallet: amibotheringu? (0x8Ad9a07fF41a193c849BB121DB1c8a81834367E8)
 Memiliki 1 token:
-- ETH: 0.000014300919703815 ($0.03)
+- ETH: 0.000013900084805963 ($0.03)
 ────────────────────
 Wallet: almostdone (0x78B878e27A8AA55358e7139acAd9dFE6Aecf17fC)
 Memiliki 1 token:
-- ETH: 0.000014766221106493 ($0.03)
+- ETH: 0.000014364784559264 ($0.03)
 ────────────────────
 Wallet: mooncgacc (0x8D887f44BEdA98F433214084d3093015c62c2D6C)
 Memiliki 1 token:
-- ETH: 0.000014861567840291 ($0.03)
+- ETH: 0.000014461005254879 ($0.03)
 ────────────────────
 
 Total Wallet yang Memiliki Token: 24
