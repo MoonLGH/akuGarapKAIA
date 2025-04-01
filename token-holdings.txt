@@ -1,0 +1,59 @@
+Laporan Kepemilikan Token (Non-ETH)
+Tanggal: 3/31/2025, 7:16:37 PM
+
+Wallet: FARELBUTUH13
+Memiliki 2 token:
+- $MFER: 1.10913806632069855
+- $RUNNER: 0.041212972011593169
+────────────────────
+Wallet: BERHENTI
+Memiliki 2 token:
+- $RUNNER: 0.041212972011593169
+- $TOBY: 2123224.91219372316011038
+────────────────────
+Wallet: kenyang
+Memiliki 2 token:
+- $DICKBUTT: 960.318514852353065419
+- $RUNNER: 0.041212972011593169
+────────────────────
+Wallet: testimoni
+Memiliki 1 token:
+- $TOBY: 1061612.45609686158005519
+────────────────────
+Wallet: pssi
+Memiliki 2 token:
+- $DEGEN: 3.540881510813761886
+- $TOBY: 1061612.45609686158005519
+────────────────────
+Wallet: quesera
+Memiliki 2 token:
+- $RUNNER: 0.041212972011593169
+- $TOBY: 1061612.45609686158005519
+────────────────────
+Wallet: rphbis
+Memiliki 1 token:
+- $MFER: 1.10913806632069855
+────────────────────
+Wallet: megudara
+Memiliki 1 token:
+- $TOBY: 1061612.45609686158005519
+────────────────────
+Wallet: idigitaf
+Memiliki 1 token:
+- $TOBY: 1061612.45609686158005519
+────────────────────
+Wallet: keretakencan
+Memiliki 1 token:
+- $TOBY: 1061612.45609686158005519
+────────────────────
+Wallet: tersenyum
+Memiliki 1 token:
+- $RUNNER: 0.041212972011593169
+────────────────────
+Wallet: amibotheringu?
+Memiliki 2 token:
+- $HIGHER: 2.605152512881386826
+- $RUNNER: 0.041212972011593169
+────────────────────
+
+Total Wallet yang Memiliki Token: 12

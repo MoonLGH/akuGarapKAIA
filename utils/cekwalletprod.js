@@ -10,6 +10,7 @@ const config = {
   CACHE_FILE: "price-cache.json",
   CACHE_TTL: 15 * 60 * 1000, // 15 menit
   MIN_BALANCE: 0.02, // Minimum $0.01 untuk ditampilkan
+  OUTPUT_FILE: "token-holdings.txt" // File output baru
 };
 
 // Baca konfigurasi wallet dari file
