@@ -83,8 +83,8 @@ async function main() {
   
   // Process each configuration sequentially
   for (const userConfig of configs) {
-    const config = { ...baseConfig, ...userConfig };
-    await processClaimsForConfig(config);
+    const config = {  ...userConfig };
+    await chat(config);
     
     // Small delay between different accounts
     await new Promise(resolve => setTimeout(resolve, 5000));
