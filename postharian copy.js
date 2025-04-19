@@ -5,7 +5,28 @@ require("dotenv").config()
 const axios = require('axios');
 const fs = require("fs")
 const { ethers } = require('ethers');
+function readConfigs() {
+  try {
+    const data = fs.readFileSync('data.txt', 'utf8').trim();
+    const lines = data.split('\n');
 
+    return lines.map(line => {
+      const parts = line.trim().split(' - ');
+      const wallet = ethers.Wallet.fromPhrase(parts[1]); // Create wallet from mnemonic
+
+      return {
+        name: parts[0],
+        mnemonic: parts[1],
+        ethAddress: wallet.address, // Derive ethAddress from mnemonic
+        authToken: parts[2],
+        bearerWC: parts[3]
+      };
+    });
+  } catch (error) {
+    console.error('Error reading data.txt:', error.message);
+    process.exit(1);
+  }
+}
 
 let lastAiResponse = null;
 // AIzaSyCl0hGu9Xg0iGNLgMaYUvqsvMRBO_gAdtU
@@ -72,25 +93,27 @@ async function chat(config) {
 }
 
 async function main() {
-  const configs = JSON.parse(process.env.config);
-  
-  if (configs.length === 0) {
-    console.log('No configurations found in data.txt');
-    return;
-  }
-
-  console.log(`Found ${configs.length} configurations in data.txt`);
-  
-  // Process each configuration sequentially
-  for (const userConfig of configs) {
-    const config = { ...baseConfig, ...userConfig };
-    await processClaimsForConfig(config);
+    const configs = readConfigs();
+    console.log(configs)
     
-    // Small delay between different accounts
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    if (configs.length === 0) {
+      console.log('No configurations found in data.txt');
+      return;
+    }
+  
+    console.log(`Found ${configs.length} configurations in data.txt`);
+    
+    // Process each configuration sequentially
+    for (const userConfig of configs) {
+      const config = {...userConfig };
+      await chat(config);
+      
+      // Small delay between different accounts
+      await new Promise(resolve => setTimeout(resolve, 5000));
+    }
+  
+    console.log('\nAll configurations processed');
   }
-
-  console.log('\nAll configurations processed');
-}
+  
 // Run the complete process
 main();
