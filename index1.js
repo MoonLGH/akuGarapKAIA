@@ -27,6 +27,7 @@ async function fetchClaimableEggs(config) {
       }
     });
 
+    console.log(response.data)
     return response.data.data.claimAllEggs;
   } catch (error) {
     console.error('API Error:', error.response?.data || error.message);

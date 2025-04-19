@@ -178,7 +178,6 @@ async function scanWallet(walletConfig) {
         const price = token.price || await getCachedPrice(token.address);
         const value = balanceNum * price;
         
-        if (value >= config.MIN_BALANCE) {
           console.log(
             `${token.symbol}: ${formattedBalance} ` +
             `(Harga: $${formatSmallNumber(price)} | Nilai: $${value.toFixed(2)})`
@@ -190,7 +189,6 @@ async function scanWallet(walletConfig) {
             symbol: token.symbol,
             balance: formattedBalance
           });
-        }
       }
     } catch (error) {
       console.error(`Error processing ${token.symbol}:`, error.message);
@@ -198,16 +196,10 @@ async function scanWallet(walletConfig) {
   }
 
   // Tulis ke file jika wallet memiliki token selain ETH
-  if (tokenHoldings.length > 0) {
-    writeTokenHoldings(walletConfig.name, tokenHoldings,wallet.address);
-  }
-  // tulis ke file jumlah eth juga
-  writeTokenHoldings(walletConfig.name, [
-    {
+    writeTokenHoldings(walletConfig.name, tokenHoldings.concat(    {
       symbol: "ETH",
       balance: ethBalanceInEth + ` ($${ethValue.toFixed(2)})`
-    }
-  ],wallet.address);
+    }),wallet.address);
 
   console.log("──────────────────────────────────");
   console.log(`💰 Total Value: $${totalValue.toFixed(2)}`);

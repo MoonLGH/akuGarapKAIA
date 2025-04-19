@@ -10,9 +10,6 @@ function readConfigs() {
 
     return lines.map(line => {
       const parts = line.trim().split(' - ');
-      if (parts.length !== 3) {
-        throw new Error(`Invalid line format. Expected: "NAME - MNEMONIC - AUTH_TOKEN"\nGot: "${line}"`);
-      }
       
       const wallet = ethers.Wallet.fromPhrase(parts[1]); // Create wallet from mnemonic
 
@@ -141,6 +138,7 @@ async function processClaimsForConfig(config) {
     console.log(`\n=== Processing claims for ${config.name} (${config.ethAddress}) ===`);
     const claims = await fetchClaimableEggs(config);
     
+    console.log(claims)
     if (!claims || claims.length === 0) {
       console.log('No claimable eggs found');
       return;
@@ -169,7 +167,7 @@ async function processClaimsForConfig(config) {
 
 async function main() {
   const configs = readConfigs();
-
+  console.log(configs)
   
   if (configs.length === 0) {
     console.log('No configurations found in data.txt');

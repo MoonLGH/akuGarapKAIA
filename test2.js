@@ -14,18 +14,18 @@ const config = {
 async function fetchClaimableEggs() {
   try {
 
-    const getserial = await axios.post(config.apiEndpoint, {"operationName":"getMyData","query":"query getMyData {\n  getMe {\n    serialId\n    id\n    avatar\n    totalDailyYield\n    unclaimedEggs\n    totalJackpotTicketsClaimed\n    shouldDisplayJackpotPreviewData\n    hens {\n      id\n      serialId\n      name\n      dailyYield\n      level\n    }\n    didClaimCurrentJackpot\n    isAirdropUser\n    getJackpotTicketsCount\n    claimStreak {\n      claimedToday\n      claimNumber\n    }\n    getJackpotTickets {\n      type\n      amount\n    }\n  }\n}","variables":{}}
-    , {
-      headers: {
-        'Authorization': config.authToken,
-        'Content-Type': 'application/json'
-      }
-    });
-    const serialId = getserial.data.data.getMe.hens[0].serialId;
+    // const getserial = await axios.post(config.apiEndpoint, {"operationName":"getMyData","query":"query getMyData {\n  getMe {\n    serialId\n    id\n    avatar\n    totalDailyYield\n    unclaimedEggs\n    totalJackpotTicketsClaimed\n    shouldDisplayJackpotPreviewData\n    hens {\n      id\n      serialId\n      name\n      dailyYield\n      level\n    }\n    didClaimCurrentJackpot\n    isAirdropUser\n    getJackpotTicketsCount\n    claimStreak {\n      claimedToday\n      claimNumber\n    }\n    getJackpotTickets {\n      type\n      amount\n    }\n  }\n}","variables":{}}
+    // , {
+    //   headers: {
+    //     'Authorization': config.authToken,
+    //     'Content-Type': 'application/json'
+    //   }
+    // });
+    // const serialId = getserial.data.data.getMe.hens[0].serialId;
     
     const response = await axios.post(config.apiEndpoint, {
-        query:`mutation claimAllEggs{generateChickenLevelUpgrade(henSerialId:${serialId}){id encodedData fromLevel r succeeded toLevel vs}}`,
-        operationName:"claimAllEggs"
+      "query":"query MyQuery{getMe{hens{userId}}}",
+      "operationName":"MyQuery"
     }, 
         {
       headers: {
@@ -33,7 +33,7 @@ async function fetchClaimableEggs() {
         'Content-Type': 'application/json'
       }
     });
-    console.log(response.data)
+    console.log(response.data.data.getMe.hens)
     return response.data;
   } catch (error) {
     console.error('API Error:', error.response?.data || error.message);
