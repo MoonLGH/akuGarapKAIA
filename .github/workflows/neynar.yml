@@ -1,4 +1,4 @@
-name: Scheduled Token Transfer
+name: Scheduled post
 
 on:
   schedule:
