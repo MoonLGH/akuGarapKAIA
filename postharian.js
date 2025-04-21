@@ -10,7 +10,7 @@ const { ethers } = require('ethers');
 let lastAiResponse = null;
 // AIzaSyCl0hGu9Xg0iGNLgMaYUvqsvMRBO_gAdtU
 async function generateContent() {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCl0hGu9Xg0iGNLgMaYUvqsvMRBO_gAdtU`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.google}`;
     const headers = { 'Content-Type': 'application/json' };
   
     // Gabungkan prompt menjadi satu bagian (tanpa 'system' role)

@@ -26,6 +26,7 @@ jobs:
         env:
           NODE_ENV: production
           config: ${{ secrets.env_neynar }}
+          google: ${{ secrets.google }}
 
       - name: Run cekneynar.js
         run: node checkneynar.js
