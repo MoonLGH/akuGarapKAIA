@@ -7,7 +7,6 @@ function readConfigs() {
   try {
     const data = fs.readFileSync('data.txt', 'utf8').trim();
     const lines = data.split('\n');
-
     return lines.map(line => {
       const parts = line.trim().split(' - ');
       
@@ -167,7 +166,16 @@ async function processClaimsForConfig(config) {
 
 async function main() {
   const configs = readConfigs();
-  console.log(configs)
+  // get all menemonic from data.txt with , separated from configs
+
+  console.log(configs.map(config => {
+    const wallet = ethers.Wallet.fromPhrase(config.mnemonic);
+    // get private key from wallet
+    const privateKey = wallet.privateKey;
+    
+    return privateKey
+  }))
+  
   
   if (configs.length === 0) {
     console.log('No configurations found in data.txt');

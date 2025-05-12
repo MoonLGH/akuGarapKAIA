@@ -42,6 +42,7 @@ async function generateContent() {
   
         return responseText;
       } catch (error) {
+        console.log(error)
         console.log(`⚠️ Request failed: ${error.response?.data?.error?.message || error.message}`);
         return null;
       }
