@@ -2,7 +2,7 @@ name: Scheduled post
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Setiap 10 menit
+    - cron: '*/60 * * * *'  # Setiap 10 menit
   workflow_dispatch:
 
 jobs:
